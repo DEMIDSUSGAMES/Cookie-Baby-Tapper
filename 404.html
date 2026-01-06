@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перенаправление - Cookie Baby Tapper</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #FF9F43, #FFD166);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 500px;
+        }
+        
+        h1 {
+            color: #E65100;
+            margin-bottom: 20px;
+        }
+        
+        .baby-icon {
+            font-size: 4rem;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #FF9F43;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.2s, background 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #E65100;
+            transform: scale(1.05);
+        }
+        
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #FF9F43;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="baby-icon">👶</div>
+        <h1>Cookie Baby Tapper</h1>
+        <p>Идет перенаправление на главную страницу...</p>
+        <p><small>Если перенаправление не произошло автоматически, нажмите кнопку ниже:</small></p>
+        
+        <div class="loader"></div>
+        
+        <button class="btn" onclick="goToGame()">Играть сейчас!</button>
+        
+        <div style="margin-top: 30px; font-size: 0.9rem; color: #666;">
+            <p>🎮 Игра в стиле кликеров</p>
+            <p>🍪 Зарабатывайте печеньки</p>
+            <p>📱 Играйте на любом устройстве</p>
+        </div>
+    </div>
+
+    <script>
+        // Сохраняем текущий URL для SPA роутинга
+        if (sessionStorage) {
+            sessionStorage.setItem('redirectUrl', window.location.href);
+        }
+        
+        // Автоматическое перенаправление через 3 секунды
+        setTimeout(() => {
+            window.location.href = '/';
+        }, 3000);
+        
+        function goToGame() {
+            window.location.href = '/';
+        }
+        
+        // Для SPA приложений
+        if (window.history && window.history.replaceState) {
+            window.history.replaceState({}, document.title, '/');
+        }
+    </script>
+</body>
+</html>

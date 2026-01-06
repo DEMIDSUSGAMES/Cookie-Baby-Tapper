@@ -1,0 +1,71 @@
+{
+  "name": "Cookie Baby Tapper Deluxe",
+  "short_name": "Cookie Baby",
+  "description": "Тапайте малыша, зарабатывайте печеньки и развивайте свою империю!",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#FFF5E4",
+  "theme_color": "#FF9F43",
+  "categories": ["games", "entertainment"],
+  "lang": "ru",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDUiIGZpbGw9IiNGRjk2NDMiLz48Y2lyY2xlIGN4PSIzNSIgY3k9IjQwIiByPSI1IiBmaWxsPSIjMzMzIi8+PGNpcmNsZSBjeD0iNjUiIGN5PSI0MCIgcj0iNSIgZmlsbD0iIzMzMyIvPjxwYXRoIGQ9Ik00MCwNjUgUTUwLDc1IDYwLDY1IiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDUiIGZpbGw9IiNGRjk2NDMiLz48Y2lyY2xlIGN4PSIzNSIgY3k9IjQwIiByPSI1IiBmaWxsPSIjMzMzIi8+PGNpcmNsZSBjeD0iNjUiIGN5PSI0MCIgcj0iNSIgZmlsbD0iIzMzMyIvPjxwYXRoIGQ9Ik00MCw2NSBRNTAsNzUgNjAsNjUiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PC9zdmc+",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://via.placeholder.com/540x720/FF9F43/FFFFFF?text=Cookie+Baby+Tapper",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "https://via.placeholder.com/720x540/FF9F43/FFFFFF?text=Cookie+Baby+Tapper+Game",
+      "sizes": "720x540",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Играть сейчас",
+      "short_name": "Играть",
+      "description": "Быстрый старт игры",
+      "url": "/?quickplay=true",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQ1IiBmaWxsPSIjRkY5NjQzIi8+PHBhdGggZD0iTTQwLDQ1IEw3MCw1MCBMNDAsNTUgWiIgZmlsbD0iIzMzMyIvPjwvc3ZnPg==",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Статистика",
+      "short_name": "Статы",
+      "description": "Посмотреть статистику",
+      "url": "/?tab=stats"
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+cookiebaby",
+      "url": "/?invite=%s"
+    }
+  ]
+}

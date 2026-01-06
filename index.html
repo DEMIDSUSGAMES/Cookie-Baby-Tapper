@@ -1,0 +1,43 @@
+<!-- Добавьте эти скрипты перед закрывающим </script> -->
+<script src="7-save-manager.js"></script>
+<script src="6-mobile-optimization.js"></script>
+<script>
+    // Вместо initGame используйте:
+    window.onload = function() {
+        // Инициализация
+        setViewportHeight();
+        
+        // Обработчики событий
+        const baby = document.getElementById('baby');
+        baby.addEventListener('click', tapBaby);
+        baby.addEventListener('touchstart', handleTouchStart, { passive: true });
+        baby.addEventListener('touchend', handleTouchEnd, { passive: true });
+        
+        // Загрузка игры
+        SaveManager.loadGame();
+        
+        // Обновление интерфейса
+        updateBabySkin();
+        renderBuildings();
+        renderUpgrades();
+        startGameLoop();
+        startStatsTracking();
+        startBoredomTracking();
+        startHelperAnimation();
+        startBuildingAnimation();
+        updateUI();
+        
+        // Мобильная оптимизация
+        MobileOptimization.init();
+        
+        // Service Worker для PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('2-service-worker.js');
+        }
+        
+        // Приветственное сообщение
+        setTimeout(() => {
+            showMilestone("👶", "Добро пожаловать!", "Кликайте на малыша!");
+        }, 1000);
+    };
+</script>
